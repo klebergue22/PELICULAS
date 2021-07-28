@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
 using peliculasAPI.DTOs;
 using peliculasAPI.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace peliculasAPI.Utilidades
 {
@@ -14,6 +10,9 @@ namespace peliculasAPI.Utilidades
         {
             CreateMap<Genero, GeneroDTO>().ReverseMap();
             CreateMap<GeneroCreacionDTO, Genero>();
+            CreateMap<Actor, ActorDTO>().ReverseMap();
+            CreateMap<ActorCreacionDTO, Actor>()
+                .ForMember(x => x.Foto, options => options.Ignore());
         }
     }
 }
