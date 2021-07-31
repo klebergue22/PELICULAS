@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 using peliculasAPI.ApiBehavior;
 using peliculasAPI.Controllers;
 using peliculasAPI.Filtros;
-
+using peliculasAPI.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,6 +35,8 @@ namespace peliculasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(Startup));
+            services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
+            services.AddHttpContextAccessor();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
 
             services.AddControllers(options =>
@@ -64,6 +66,7 @@ namespace peliculasAPI
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
             app.UseRouting();
 
