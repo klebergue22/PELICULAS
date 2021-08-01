@@ -2,23 +2,15 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using NetTopologySuite;
+using NetTopologySuite.Geometries;
 using peliculasAPI.ApiBehavior;
-using peliculasAPI.Controllers;
 using peliculasAPI.Filtros;
 using peliculasAPI.Utilidades;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace peliculasAPI
 {
@@ -35,6 +27,15 @@ namespace peliculasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(Startup));
+            services.AddSingleton(provider =>
+
+                new MapperConfiguration(config =>
+                {
+                    var geometryFactory = provider.GetRequiredService<GeometryFactory>();
+                    config.AddProfile(new AutoMapperProfiles(geometryFactory));
+                }).CreateMapper());
+
+            services.AddSingleton<GeometryFactory>(NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326));
             services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
             services.AddHttpContextAccessor();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
@@ -45,7 +46,9 @@ namespace peliculasAPI
                 options.Filters.Add(typeof(ParsearBadRequest));
             }).ConfigureApiBehaviorOptions(BehaviorBadRequests.Parsear);
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("defaultConnection"),
+            sqlServer => sqlServer.UseNetTopologySuite()));
+
             services.AddCors(options =>
             {
                 var frontendURL = Configuration.GetValue<string>("frontend_url");
