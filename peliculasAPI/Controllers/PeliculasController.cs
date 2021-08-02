@@ -19,6 +19,7 @@ namespace peliculasAPI.Controllers
         private readonly IMapper mapper;
         private readonly IAlmacenadorArchivos almacenadorArchivos;
         private readonly string contenedor = "peliculas";
+        private IQueryable<Pelicula> peliculasQueryable;
 
         public PeliculasController(ApplicationDbContext context, IMapper mapper, IAlmacenadorArchivos almacenadorArchivos)
         {
@@ -63,6 +64,34 @@ namespace peliculasAPI.Controllers
             var dto = mapper.Map<PeliculaDTO>(pelicula);
             dto.Actores = dto.Actores.OrderBy(x => x.Orden).ToList();
             return dto;
+        }
+
+        [HttpGet("filtrar")]
+        public async Task<ActionResult<List<PeliculaDTO>>> Filtrar([FromQuery] PeliculasFiltrarDTO peliculasFiltrarDTO)
+        {
+            var peliculasQueryable = context.Peliculas.AsQueryable();
+            if (!string.IsNullOrEmpty(peliculasFiltrarDTO.Titulo))
+            {
+                peliculasQueryable = peliculasQueryable.Where(x => x.Titulo.Contains(peliculasFiltrarDTO.Titulo));
+            }
+            if (peliculasFiltrarDTO.EnCines)
+            {
+                peliculasQueryable = peliculasQueryable.Where(x => x.EnCines);
+            }
+            if (peliculasFiltrarDTO.ProximosEstrenos)
+            {
+                var hoy = DateTime.Today;
+                peliculasQueryable = peliculasQueryable.Where(x => x.FechaLanzamiento > hoy);
+            }
+            if (peliculasFiltrarDTO.GeneroId != 0)
+            {
+                peliculasQueryable = peliculasQueryable
+                    .Where(x => x.PeliculaGeneros.Select(y => y.GeneroId)
+                    .Contains(peliculasFiltrarDTO.GeneroId));
+            }
+            await HttpContext.InsertarParametrosPaginacionEnCabecera(peliculasQueryable);
+            var peliculas = await peliculasQueryable.Paginar(peliculasFiltrarDTO.PaginacionDTO).ToListAsync();
+            return mapper.Map<List<PeliculaDTO>>(peliculas);
         }
 
         [HttpPost]
@@ -149,6 +178,20 @@ namespace peliculasAPI.Controllers
                     pelicula.PeliculasActores[i].Orden = i;
                 }
             }
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var pelicula = await context.Peliculas.FirstOrDefaultAsync(x => x.Id == id);
+            if (pelicula == null)
+            {
+                return NotFound();
+            }
+            context.Remove(pelicula);
+            await context.SaveChangesAsync();
+            await almacenadorArchivos.BorrarAchivo(pelicula.Poster, contenedor);
+            return NoContent();
         }
     }
 }
