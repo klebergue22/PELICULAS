@@ -118,7 +118,7 @@ namespace peliculasAPI.Controllers
             return new PeliculasPostGetDTO() { Cines = cinesDTO, Generos = generosDTO };
         }
 
-        [HttpGet("PutGet")]
+        [HttpGet("PutGet/{id:int}")]
         public async Task<ActionResult<PeliculasPutGetDTO>> PutGet(int id)
         {
             var peliculaActionResult = await Get(id);
