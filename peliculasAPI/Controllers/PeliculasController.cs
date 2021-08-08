@@ -26,7 +26,8 @@ namespace peliculasAPI.Controllers
         private readonly string contenedor = "peliculas";
         private IQueryable<Pelicula> peliculasQueryable;
 
-        public PeliculasController(ApplicationDbContext context, IMapper mapper, IAlmacenadorArchivos almacenadorArchivos, UserManager<IdentityUser> userManager)
+        public PeliculasController(ApplicationDbContext context, IMapper mapper,
+            IAlmacenadorArchivos almacenadorArchivos, UserManager<IdentityUser> userManager)
         {
             this.context = context;
             this.mapper = mapper;

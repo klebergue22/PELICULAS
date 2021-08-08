@@ -25,6 +25,7 @@ namespace peliculasAPI.Controllers
             this.context = context;
         }
 
+        [Route("/post")]
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> Post([FromBody] RatingDTO ratingDTO)
