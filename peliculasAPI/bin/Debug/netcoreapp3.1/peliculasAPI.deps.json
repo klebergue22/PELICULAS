@@ -35,6 +35,7 @@
           "Azure.Storage.Blobs": "12.9.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.9",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Analyzers": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0",

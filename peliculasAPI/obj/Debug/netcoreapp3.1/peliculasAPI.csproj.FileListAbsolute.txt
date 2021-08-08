@@ -64,6 +64,12 @@ C:\ReactApp\Externo\peliculas\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.
 C:\ReactApp\Externo\peliculas\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.pdb
 C:\ReactApp\Externo\peliculas\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.genruntimeconfig.cache
 C:\ReactApp\Externo\peliculas\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.csproj.AssemblyReference.cache
+C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.AssemblyInfoInputs.cache
+C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.AssemblyInfo.cs
+C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.csproj.CoreCompileInputs.cache
+C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
+C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.csproj.AssemblyReference.cache
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\appsettings.json
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\peliculasAPI.exe
@@ -79,6 +85,9 @@ C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Azure.Storage
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
@@ -92,6 +101,8 @@ C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Ext
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
@@ -126,11 +137,6 @@ C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\runtimes\win-
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.AssemblyInfoInputs.cache
-C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.AssemblyInfo.cs
-C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.csproj.CoreCompileInputs.cache
-C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
 C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\staticwebassets\peliculasAPI.StaticWebAssets.Manifest.cache
 C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\staticwebassets\peliculasAPI.StaticWebAssets.xml
 C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\peliculasAPI.styles.css
@@ -139,9 +145,3 @@ C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.
 C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.dll
 C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.pdb
 C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.genruntimeconfig.cache
-C:\REACT\Backend\peliculasAPI\peliculasAPI\obj\Debug\netcoreapp3.1\peliculasAPI.csproj.AssemblyReference.cache
-C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
-C:\REACT\Backend\peliculasAPI\peliculasAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
