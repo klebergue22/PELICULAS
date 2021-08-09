@@ -59,6 +59,10 @@ namespace peliculasAPI
                     ClockSkew = System.TimeSpan.Zero
                 });
 
+            services.AddAuthorization(opciones =>
+            {
+                opciones.AddPolicy("EsAdmin", policy => policy.RequireClaim("role", "admin"));
+            });
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(FiltroDeExcepcion));

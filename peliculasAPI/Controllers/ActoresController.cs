@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using peliculasAPI.DTOs;
@@ -13,6 +15,7 @@ namespace peliculasAPI.Controllers
 {
     [Route("api/actores")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
     public class ActoresController : ControllerBase
     {
         private readonly ApplicationDbContext context;
